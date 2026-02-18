@@ -113,7 +113,7 @@ class ColorTap extends StatelessWidget {
         child: Center(
           child: ListenableBuilder(
             listenable: colorService,
-            builder: (context, index) => Text(
+            builder: (context, child) => Text(
               'Taps: ${colorService.getCount(type)}',
               style: TextStyle(fontSize: 24, color: Colors.white),
             ),
@@ -136,7 +136,7 @@ class StatisticsScreen extends StatelessWidget {
       body: Center(
         child: ListenableBuilder(
           listenable: colorService,
-          builder:(context, index) => Column(
+          builder:(context, child) => Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ...CardType.values.map((c) => 
